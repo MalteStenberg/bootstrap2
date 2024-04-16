@@ -1,0 +1,131 @@
+$header-height: 10vh;
+$header-img-height: 4vw;
+$header-ul-gap: 5vw;
+$header-ul-font-size: 1.7vw;
+
+$content-height: 65vh;
+$content-bg-color: #fff500;
+$left-width: 50vw;
+$content-description-height: 20vh;
+$content-description-font-size: 1.2vw;
+$left-img-width: 4vw;
+$left-button-width: 12vw;
+$left-button-padding: 15px;
+$left-button-border-radius: 20px;
+$left-button-margin-left: 9vw;
+$left-button-margin-top: 10vh;
+$right-width: 50vw;
+$right-image-width: 30vw;
+$bottom-img-width: 73vw;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+// Nav bar
+.header {
+  width: 100vw;
+  height: $header-height;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+
+  img {
+    height: $header-img-height;
+    align-self: center;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: $header-ul-gap;
+    list-style: none;
+    list-style-type: none;
+
+    li a {
+      color: black;
+      text-decoration: none;
+      font-size: $header-ul-font-size;
+      margin-right: 2vw;
+    }
+  }
+}
+
+// Index.html
+// Content mitten av sidan
+.content {
+  height: $content-height;
+  background-color: $content-bg-color;
+  display: flex;
+
+  .left {
+    height: $content-height;
+    width: $left-width;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    .content-description {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      height: $content-description-height;
+      align-self: center;
+
+      p {
+        align-self: center;
+        line-height: 0.8cm;
+        padding: 20px;
+        font-size: $content-description-font-size;
+        overflow: hidden;
+      }
+    }
+
+    img {
+      width: $left-img-width;
+      margin-left: 13vw;
+    }
+
+    button {
+      width: $left-button-width;
+      padding: $left-button-padding;
+      border-radius: $left-button-border-radius;
+      margin-left: $left-button-margin-left;
+      margin-top: $left-button-margin-top;
+      color: white;
+      background-color: #bcbbe5;
+      font-size: 1.1vw;
+      font-weight: 400;
+    }
+  }
+
+  .right {
+    height: $content-height;
+    width: $right-width;
+    position: relative;
+
+    .right-image {
+      justify-content: center;
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+
+      img {
+        width: $right-image-width;
+      }
+    }
+  }
+}
+
+// Bottom
+.bottom {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: $bottom-img-width;
+  }
+}

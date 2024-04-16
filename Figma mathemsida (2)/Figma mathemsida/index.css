@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* annimationer (anges med class på element)*/
+
+.hover-effect:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #e92828;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.hover-effect:hover:after {
+  transform: scaleX(1);
+}
+
+.hover-effect.fromRight:after {
+  transform-origin: 100% 50%;
+}
+
+.hover-effect.fromLeft:after {
+  transform-origin: 0% 50%;
+}
+
+.button-hover-effet:hover {
+  transform: scale(1.03);
+  background-color: #ee5151;
+}
+
+.image-hover-opacity:hover {
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
+/* Nav bar */
+
+.header {
+  width: 100vw;
+  height: 10svh;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.header img {
+  height: 4vw;
+  align-self: center;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  list-style: none;
+  list-style-type: none;
+}
+
+.header ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.7vw;
+  margin-right: 2vw;
+}
+
+/* index.html gjordes i scss (css/style.css) */
+
+/* menu.html */
+
+.menu {
+  background-color: yellow;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 3.5vw;
+}
+
+.orange-yellow {
+  width: 100vw;
+  height: 4vh;
+  background-color: #ecc520;
+}
+
+.menu-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
+  gap: 5vw;
+  justify-content: center;
+  background-color: yellow;
+  max-width: 80vw; /* Set a maximum width to ensure a maximum of 4 items per row */
+  margin: 0 auto; /* Center the grid */
+  padding: 2vh; /* Add some padding for spacing */
+  box-sizing: border-box; /* Include padding in the total width */
+}
+
+.menu-card {
+  background-color: #bcbbe5;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid orange;
+  margin-top: 4vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu-card h3 {
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+.menu-card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background-color: #e92828;
+  transition: opacity 0.3s;
+}
+
+.menu-card-image {
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.menu-card-image:hover {
+  opacity: 0.9;
+  content: url("hover4.png");
+  margin-left: -30px;
+}
+
+.menu-card-info {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.menu-card-info img {
+  width: 1vw;
+}
+
+.menu-card-info button {
+  border-radius: 10px;
+}
+
+/* Contacts.html */
+
+.contact {
+  display: flex;
+  background-color: #fff500;
+  width: 100vw;
+  height: 70svh;
+}
+
+.right-contact {
+  display: flex;
+  width: 20vw;
+  height: 70svh;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.right-contact img {
+  height: 70%;
+  overflow: hidden;
+}
+
+.right-contact img:hover {
+  animation: fadeImage 1s linear;
+}
+
+.contact-form {
+  height: 70svh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff500;
+}
+
+.contact-form-form input {
+  border: 1px solid #e92828;
+  padding: 1vw;
+  margin-bottom: 2vh;
+}
+
+.contact-form-form label {
+  font-weight: 100;
+  font-size: 1vw;
+}
+
+.contact-form-form {
+  margin-top: 5vh;
+}
+
+.contact-form-form-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-form-form-bottom input {
+  border: none;
+  color: white;
+  background-color: #ee5151;
+  margin-top: 2vh;
+  transition: 0.5s;
+}
+
+.bottom-icons {
+  display: flex;
+  gap: 2vw;
+}
+
+/* myOrders.html */
+
+.order-content {
+  background-color: #fff500;
+  width: 100vw;
+  height: 70vh; /* Corrected typo in the height unit */
+  display: flex;
+}
+
+.left-order-content {
+  width: 50vw;
+  height: 70vh; /* Corrected typo in the height unit */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-order-content button {
+  margin-top: 5vh;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1vw;
+  font-size: 1.2vw;
+}
+
+.right-order-content {
+  width: 50vw;
+  height: 70vh; /* Corrected typo in the height unit */
+  position: relative;
+}
+
+.right-order-content img {
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.order-content-menu {
+  background-color: white;
+  width: 18vw;
+  border-radius: 5px;
+}
+
+.order-content-menu p {
+  font-size: 1.2vw;
+  display: flex;
+  align-items: center;
+}
+
+.order-content-menu span {
+  margin-left: auto;
+  font-weight: 500;
+}
+
+/* Animationer */
+
+/* Denna animation kommer att göra bilden lite mer (onsynlig) 
+  Kommer att användas inom en hover function 
+*/
+@keyframes fadeImage {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
